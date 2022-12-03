@@ -1,0 +1,90 @@
+object Form1: TForm1
+  Left = 389
+  Height = 389
+  Top = 164
+  Width = 503
+  Caption = 'PONG'
+  ClientHeight = 389
+  ClientWidth = 503
+  Color = clBlack
+  OnCreate = FormCreate
+  OnMouseMove = ControlPaddle
+  LCLVersion = '1.8.0.6'
+  object Paddle: TShape
+    Left = 200
+    Height = 22
+    Top = 344
+    Width = 81
+    OnMouseMove = PaddleMouseMove
+  end
+  object Ball: TShape
+    Left = 160
+    Height = 24
+    Top = 240
+    Width = 22
+    Shape = stEllipse
+  end
+  object lblScore: TLabel
+    Left = 432
+    Height = 15
+    Top = 8
+    Width = 58
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Score:0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'MS PGothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblGameOver: TLabel
+    Left = 0
+    Height = 19
+    Top = 96
+    Width = 503
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Game Over'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'MS PGothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblRestart: TLabel
+    Left = 0
+    Height = 13
+    Top = 124
+    Width = 503
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Restart'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'MS PGothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblRestartClick
+    OnMouseEnter = lblRestartMouseEnter
+    OnMouseLeave = lblRestartMouseLeave
+  end
+  object tmrGame: TTimer
+    Enabled = False
+    Interval = 25
+    OnTimer = tmrGameTimer
+    left = 32
+    top = 48
+  end
+end
