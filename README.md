@@ -5,3 +5,4 @@ I will add the following soon:
 
 1.Start Screen
 2.Highscore leaderboard
+3.Delphi version
